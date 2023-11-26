@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.Container {
+display: flex;
+flex-direction: column;
+font-family: 'Noto Sans Display';
+color: #fff;
+padding: 0px 50px;
+}
+
+.capa{
+height: 285px;
+width: 480px;
+}
+
+.play {
+width: 50px;
+height: 50px;
+margin-left: -70px;
+margin-bottom: 10px;
+}
+
+.titulo {
+font-size: 22px;
+font-weight: 600;
+margin-top: 0;
+}
+
+.descricao{
+font-size: 20px;
+width: 480px;
+margin-top: -10px;
+}
+
+.autor {
+    margin-top: -10px;
+}

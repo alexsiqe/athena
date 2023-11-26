@@ -1,0 +1,24 @@
+
+.image {
+    height: 75px;
+    border-radius: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+margin-right: 8px;
+}
+
+.nomeMentor {
+ font-size: 30px;
+ font-weight: 600;
+}
+
+.containermentor {
+ display: flex;
+ flex-direction: column;
+}

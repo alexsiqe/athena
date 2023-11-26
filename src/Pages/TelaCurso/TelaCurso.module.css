@@ -1,0 +1,75 @@
+.container {
+    margin-top: 21px;
+    background-color: #18181a;
+    height: 100vh;
+    color: #fff;
+}
+
+.a{
+    font-size: 100px;
+}
+
+.up {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.descricao {
+width: 25vw;
+padding: 100px;
+display: flex;
+flex-direction: column;
+}
+
+.descA {
+ font-size: 40px;
+ font-weight: 600;
+}
+
+.descB {
+ font-size: 20px;
+}
+
+
+
+.containervideo {
+    width: 75vw;
+    align-items: center;
+}
+
+.containerbaixo {
+    display: flex;
+    flex-direction: column;
+}
+
+.oferecimentos {
+    width: 80vw;
+    padding: 0 100px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.comentarios {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    padding: 0 100px;
+}
+
+.comentarios input{
+    border-radius: 25px;
+    font-size: 16px;
+    line-height: 40px;
+    padding: 0 15px;
+    color: #fff;
+    background-color: #111111;
+    outline: none;
+    border: none;
+}
+
+.comentarios span {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}

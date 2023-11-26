@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container {
+  background-color: #18181a;
+  height: 100%;
+  width: 100%;
+}
+
+.PalavrasBackground {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-left: 100px;
+}
+
+.A {
+  font-family: 'Black Han Sans';
+  font-size: 130px;
+}
+
+.B{
+  font-family: 'Noto Sans Display';
+  font-weight: 500;
+  font-size: 28px;
+  margin-top: -175px;
+}
+
+.C{
+  width: 630px;
+  font-family: 'Noto Sans Display';
+  font-weight: 550;
+  font-size: 35px;
+  margin-top: -15px;
+}
+
+
+.ContainerImagens {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vh;
+}
+
+.FundoAthena{
+  margin-top: -745px;
+  margin-left: -100px;
+}
+
+.Desenho {
+  width: 630px;
+  height: 630px;
+  margin-top: -910px;
+  margin-left: 1150px;
+}
