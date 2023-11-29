@@ -3,19 +3,26 @@ import styles from './TelaCurso.module.css';
 import BarraDeNavegacao from "../../Components/BarraDeNavegacao/BarraDeNavegacao";
 import Mentor from '../../Components/Mentor/Mentor';
 import axios from "axios";
+import DescricaoAula from "../../Components/DescricaoAula/DescricaoAula";
+import { useParams } from 'react-router-dom';
+
 
 function TelaCurso({ nomedocurso, oferece }) {
-    
+
     const [descricao, setDescricao] = useState([]);
+    const descricaoIdDesejado = 1;
+    const { idDoCurso } = useParams();
 
     useEffect(() => {
         BuscarDescricao();
     }, [])
-    
-    async function BuscarDescricao(){
+
+    async function BuscarDescricao() {
         const response = await axios.get("https://localhost:44333/api/athena/listaraulas");
 
-        setDescricao(response.data);
+        const descricaoFiltrada = response.data.filter(item => item.id === descricaoIdDesejado);
+
+        setDescricao(descricaoFiltrada);
     }
 
     return (
@@ -24,9 +31,9 @@ function TelaCurso({ nomedocurso, oferece }) {
             <div className={styles.up}>
                 <div className={styles.descricao}>
                     <span className={styles.descA}>Descrição</span>
-                        {descricao.map((descricao) => (
-                            <span className={styles.descB}>{descricao.desc}</span>
-                        ))}
+                    {descricao.map((descricao) => (
+                        <DescricaoAula key={descricao.id} descricao={descricao.desc}></DescricaoAula>
+                    ))}
                 </div>
 
                 <div className={styles.containervideo}>

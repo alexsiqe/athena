@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import BarraDeNavegacao from '../../Components/BarraDeNavegacao/BarraDeNavegacao';
 import CardCurso from '../../Components/CardCurso/CardCurso';
 import styles from './TelaHome.module.css'
 import Footer from '../../Components/Footer/Footer'
 import Desenho from '../../assets/images/Desenho.png'
 import FundoAthena from '../../assets/images/FundoAthena.png'
+import { useParams } from 'react-router-dom';
 
 
 function TelaHome() {
+    const [cursos, setCursos] = useState([]);
+
+    useEffect(() => {
+        BuscarCursos();
+    }, []);
+
+    async function BuscarCursos(){
+        const response = await axios.get("https://localhost:44333/api/athena/buscarcursos");
+        
+        if(response.status != 200){
+            alert("Erro ao listar usuários");
+            return;
+        }
+        setCursos(response.data);
+        }
+
     return (
         <div className={styles.container}>
             <BarraDeNavegacao></BarraDeNavegacao>
@@ -24,9 +42,17 @@ function TelaHome() {
                 CARROSSEL
                 </div> */}
             <div className={styles.Cursos}>
-                <CardCurso titulo={"Curso de Java"} descricao={"Este é, sem sombra de dúvidas, o curso de Java mais completo que você vai encontrar na atualidade."} autor={"Alex"} data={"09/09/2023"}></CardCurso>
-                <CardCurso titulo={"Curso de Java"} descricao={"Este é, sem sombra de dúvidas, o curso de Java mais completo que você vai encontrar na atualidade."} autor={"Alex"} data={"09/09/2023"}></CardCurso>
-                <CardCurso titulo={"Curso de Java"} descricao={"Este é, sem sombra de dúvidas, o curso de Java mais completo que você vai encontrar na atualidade."} autor={"Alex"} data={"09/09/2023"}></CardCurso>
+            {cursos.map((curso) => (
+                <CardCurso
+                    key={curso.id}
+                    titulo={curso.nome}
+                    descricao={curso.desc}
+                    autor={curso.instrutor}
+                    className={styles.CardCurso}
+                ></CardCurso>
+            ))}
+               
+            
             </div>
             {/* <Footer></Footer> */}
         </div>

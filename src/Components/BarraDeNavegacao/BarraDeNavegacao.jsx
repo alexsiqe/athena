@@ -62,7 +62,7 @@ function BarraDeNavegacao() {
         </a>
       </div>
 
-      <div className={styles.listaperfil}>
+      {/* <div className={styles.listaperfil}>
         <ul>
           <li>
             <a href='#' className='' onClick={handleTelaAluno}>Perfil</a>
@@ -77,7 +77,7 @@ function BarraDeNavegacao() {
             <a href='#' className='' onClick={handleTelaAluno}>Desconectar</a>
           </li>
         </ul>
-      </div>
+      </div> */}
       {/* <button onClick={onClick} img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" className={styles.imagem}></button>
 
       <nav className={styles.direita}>
